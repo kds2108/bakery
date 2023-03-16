@@ -12,5 +12,10 @@
   "devDependencies": {
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "mustache": "^4.2.0",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }

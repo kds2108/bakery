@@ -1,0 +1,53 @@
+
+@font-face {
+    font-family: "ProximaNova Regular";
+    src: url("/fonts/proximanova-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Scriptina Regular";
+    src: url("/fonts/scriptina.regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Alegreya Regular";
+    src: url("/fonts/Alegreya-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Alegreya Bold";
+    src: url("/fonts/Alegreya-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "PlayfairDisplay-Bold";
+    src: url("/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+}
+
+$ProximaNovaReg: "ProximaNova Regular";
+$ScriptinaReg: "Scriptina Regular";
+$AlegreaReg: "Alegreya Regular";
+$AlegreaBold: "Alegreya Bold";
+$PlayFairDisplayBold: "PlayfairDisplay-Bold";
+
+
+%clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.some-block {
+    @extend %clearfix;
+}
+
+body {
+    font-family: $ProximaNovaReg;
+}
+
+ul {
+    list-style: none;
+}
+
