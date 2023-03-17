@@ -1,27 +1,26 @@
-
 @font-face {
     font-family: "ProximaNova Regular";
-    src: url("/fonts/proximanova-regular.woff2") format("woff2");
+    src: url("../fonts/proximanova-regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Scriptina Regular";
-    src: url("/fonts/scriptina.regular.woff2") format("woff2");
+    src: url("../fonts/scriptina.regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Alegreya Regular";
-    src: url("/fonts/Alegreya-Regular.woff2") format("woff2");
+    src: url("../fonts/Alegreya-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Alegreya Bold";
-    src: url("/fonts/Alegreya-Bold.woff2") format("woff2");
+    src: url("../fonts/Alegreya-Bold.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "PlayfairDisplay-Bold";
-    src: url("/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+    src: url("../fonts/PlayfairDisplay-Bold.woff2") format("woff2");
 }
 
 $ProximaNovaReg: "ProximaNova Regular";
@@ -39,15 +38,73 @@ $PlayFairDisplayBold: "PlayfairDisplay-Bold";
     }
 }
 
+
+/* canceling default styles*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body, h1, h2, h3, h4, p, u, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* --- */
+
+
+
 .some-block {
     @extend %clearfix;
 }
 
 body {
     font-family: $ProximaNovaReg;
+    margin: 0;
 }
 
-ul {
-    list-style: none;
+
+.header {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
 }
 
+.nav__link {
+    color: #fff;
+}
+
+
+.section__home {
+    display: block;
+    background-image: url("../img/home.png");
+    height: 100vh;
+
+}

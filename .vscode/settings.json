@@ -1,0 +1,9 @@
+{
+    "editor.renderWhitespace": "all",
+    "pugFormatter.separatorSpace": true,
+    "emmet.syntaxProfiles": {
+        
+    },
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": true
+}
