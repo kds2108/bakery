@@ -28,6 +28,7 @@ $ScriptinaReg: "Scriptina Regular";
 $AlegreaReg: "Alegreya Regular";
 $AlegreaBold: "Alegreya Bold";
 $PlayFairDisplayBold: "PlayfairDisplay-Bold";
+$linkHoverColor: #00D1DE;
 
 
 %clearfix {
@@ -49,6 +50,7 @@ $PlayFairDisplayBold: "PlayfairDisplay-Bold";
 ul,ol {
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 
 a {
@@ -83,28 +85,164 @@ input, button, textarea, select {
     @extend %clearfix;
 }
 
+
 body {
     font-family: $ProximaNovaReg;
     margin: 0;
+    position: relative;
 }
-
 
 .header {
     position: absolute;
-    height: 100px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
+    padding-bottom: 15px;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 15px;
+        max-width: 1320px;
+        margin: auto;
+    }
+}
+
+@keyframes logo_anim {
+    from {color: #fff;}
+    to   {color: $linkHoverColor;}
+}
+
+.logo__link {
+    color: #fff;
+    font-family: $ScriptinaReg;
+    font-size: 27px;
+    letter-spacing: 7px;
+    display: inline-block;
+
+    &:hover {
+        /* animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; */
+        animation: logo_anim 1s linear infinite alternate;
+    }
+}
+
+
+.nav {
+    text-transform: uppercase;
+    padding-top: 13px;
+}
+
+.nav__list {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__item {
+    padding: 0 25px;
+    position: relative;
+
+    &:before {
+        content: "~";
+        position: absolute;
+        right: 0;
+        top: 5px;
+        font-size: 13px;
+    }
+
+    &:last-child::before {
+        display: none;
+    }
+}
+
+@keyframes nav_anim {
+    from {width: 0;}
+    to   {width: 100%;}
 }
 
 .nav__link {
     color: #fff;
+    font-family: $ProximaNovaReg;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 18px;
+    }
+
+    &:hover::before {
+        animation: nav_anim 0.3s forwards;
+    }
 }
 
+.socials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.socials__item {
+    padding: 5px;
+}
+
+@keyframes socials_anim {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+.socials__link {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: block;
+    img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+    }
+    img:last-child {
+        opacity: 0;
+    }
+    &:hover {
+        img:last-child {
+            animation: socials_anim 0.5s linear infinite alternate;
+        }
+    }
+}
+
+
+
+.wrapper {
+    max-width: 1320px;
+    margin: auto;
+    position: relative;
+}
 
 .section__home {
     display: block;
-    background-image: url("../img/home.png");
+    background: url("../img/home.png") no-repeat center;
+    background-size: cover;
     height: 100vh;
-
 }
+
+.logo, .nav, .header__right {
+    /* display: inline-flex;
+    justify-content: space-around; */
+}
+
