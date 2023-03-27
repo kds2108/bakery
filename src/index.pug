@@ -6,7 +6,9 @@ head
 	meta(name="viewport" content="width=device-width, initial-scale=1.0")
 	meta(http-equiv="X-UA-Compatible" content="ie=edge")
 	title(Bakery:homepage)
-	script(type="text/javascript" src="js/main.js")
+	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css")
+	link(rel="stylesheet" href="css/scrollbar.css")
 	link(rel="stylesheet" href="css/main.css")
 	link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
 
@@ -62,7 +64,7 @@ body
 				.section__second-left
 					h2.h2 Art of cakes
 					h3.h3 We create delicious memories
-					p Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.
+					.text Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.
 					.about-chef
 						.about-chef__title Chef Cook
 						.about-chef__name
@@ -75,5 +77,40 @@ body
 							| occasions.
 
 				.section__second-right
+					.img__wrapper
+						.img
+							span Tastes so
+								br
+								| good!
+							img(src="img/figure2.png", alt="")
+						ul.img__list
+							li.img__item
+								img(src="img/img1a.png", alt="").img--first
+								img(src="img/img1a.png", alt="").img--second
+							li.img__item
+								img(src="img/img1b.png", alt="").img--first
+								img(src="img/img1b.png", alt="").img--second
+							li.img__item
+								img(src="img/img1c.png", alt="").img--first
+								img(src="img/img1c.png", alt="").img--second
+							li.img__item
+								img(src="img/img1d.png", alt="").img--first
+								img(src="img/img1d.png", alt="").img--second
+
+		section.section__third
+			.wrapper
+				.carousel1
+					include pug-includes/carousel1.1.pug
+					include pug-includes/carousel1.2.pug
+					include pug-includes/carousel1.3.pug
+
+
+
+
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js")
+	script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+	script(type="text/javascript" src="js/main.js")
+	script(type="text/javascript" src="js/jquery.scrollbar.min.js")
 
 
