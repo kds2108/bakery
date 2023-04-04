@@ -53,6 +53,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: #56534c;
+  background: url("../img/bg2.png") center;
+  background-size: cover;
 }
 
 img {
@@ -627,7 +629,8 @@ section {
 .section__third {
   background: url("../img/bg3.jpg") no-repeat center;
   background-size: cover;
-  padding: 50px 0;
+  padding: 70px 0 100px;
+  position: relative;
 }
 .section__third .wrapper {
   max-width: 1000px;
@@ -768,4 +771,142 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.section__fourth {
+  position: relative;
+  padding: 125px 0 100px;
+  text-align: center;
+}
+
+.footer {
+  padding-bottom: 30px;
+}
+.footer .wrapper {
+  padding: 0 15px;
+}
+.footer .logo {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .logo__link {
+  color: #56534c;
+  position: relative;
+  padding: 0 40px 15px;
+}
+.footer .logo__link:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+.footer .footer__line--left,
+.footer .footer__line--right {
+  width: 33%;
+  height: 60px;
+  border-top: 1px solid #d7d5ca;
+  border-bottom: 1px solid #d7d5ca;
+}
+.footer .button {
+  font-size: 15px;
+  font-family: "Alegreya Regular";
+}
+
+.contact-form {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(84, 77, 126, 0.75);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.contact-background {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+  background: url("../img/bg2.png") no-repeat right bottom;
+  background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+  padding: 30px;
+  font-family: "Alegreya Regular";
+  font-size: 14px;
+  color: #56534c;
+}
+.form input, .form textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+}
+.form input {
+  border-bottom: 1px solid #c2beba;
+  margin-bottom: 20px;
+}
+.form textarea {
+  resize: none;
+  margin-bottom: 20px;
+  height: 130px;
+}
+.form input:focus::-webkit-input-placeholder, .form textarea:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+.form input:focus::-moz-placeholder, .form textarea:focus::-moz-placeholder {
+  opacity: 0.5;
+}
+.form input:focus:-ms-input-placeholder, .form textarea:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.form input:focus::-ms-input-placeholder, .form textarea:focus::-ms-input-placeholder {
+  opacity: 0.5;
+}
+.form input:focus::placeholder,
+.form textarea:focus::placeholder {
+  opacity: 0.5;
+}
+
+.form__title {
+  text-transform: uppercase;
+  font-family: "Alegreya Bold";
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.close-link {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: block;
+  width: 15px;
+  height: 15px;
 }

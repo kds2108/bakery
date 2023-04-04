@@ -18,3 +18,24 @@ $('.carousel2').slick({
     slidesToShow: 3,
     slidesToScroll: 1
   });
+
+
+let $contactForm = $(".j-contact-form");
+
+$(".j-contact-button").click(function(e) {
+  e.preventDefault();
+  $contactForm.fadeIn(200);
+});
+
+$(".j-close-link").click(function(e) {
+  e.preventDefault();
+  $contactForm.fadeOut(200);
+});
+
+
+$(".j-contact-background").click(function() {
+  $contactForm.fadeOut(200);
+});
+
+
+

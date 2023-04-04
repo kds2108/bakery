@@ -3,7 +3,7 @@ doctype html
 html(lang="en")
 head
 	meta(charset="utf-8")
-	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0")
 	meta(http-equiv="X-UA-Compatible" content="ie=edge")
 	title(Bakery:homepage)
 	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
@@ -55,7 +55,7 @@ body
 					img(src="img/dashed-line.png", alt="").img__dashed
 					p.title__text We’re bringing you fresh ingredients every day in ways you can’t resist.
 
-					button(type="button").button Our menu
+					a(href="https://www.mrkale.es/" target="_blank").button Our menu
 			.circle
 				img(src="img/figure1.png", alt="")
 
@@ -103,6 +103,33 @@ body
 					include pug-includes/carousel1.1.pug
 					include pug-includes/carousel1.2.pug
 					include pug-includes/carousel1.3.pug
+			.circle
+				img(src="img/figure1.png", alt="")
+
+		section.section__fourth
+			.wrapper
+				button.button.j-contact-button Contact us
+
+	footer.footer
+		.wrapper
+			.logo
+				.footer__line--left
+				.logo__link Gustoso
+				.footer__line--right
+
+	.contact-form.j-contact-form
+		.contact-background.j-contact-background
+		form.form(action="").j-form
+			a(href="#").close-link.j-close-link
+				img(src="img/close.png", alt="")
+			p.form__title Write us!
+			input(type="text" placeholder="Your name")
+			input(type="text" placeholder="Your e-mail")
+			textarea(name="", placeholder="Your message")
+			button.button Send
+
+
+
 
 
 
