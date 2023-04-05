@@ -1,6 +1,8 @@
 //scrollbar
-jQuery(document).ready(function(){
-    jQuery('.scrollbar-macosx').scrollbar();
+$(document).ready(function(){
+    if ($(window).width() >= '768') {
+      $('.scrollbar-macosx').scrollbar();
+    }
 });
 
 
