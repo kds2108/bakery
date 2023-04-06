@@ -813,7 +813,50 @@ section {
 }
 
 .burger-menu {
-    display: none
+    display: none;
+}
+
+.carousel2__item-image {
+    display: inline-block;
+}
+
+.carousel2__item {
+    text-align: center;
+}
+
+.mobile-header {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    .nav {
+        display: block;
+    }
+    .burger-link {
+        display: none;
+    }
+    .burger-close-link {
+        display: block !important;
+        left: 5px;
+        top: 7px !important;
+        position: absolute;
+    }
+    .container {
+        padding: 10px 15px !important;
+    }
+    .nav__list {
+        display: block;
+        padding-top: 25px;
+    }
+    .nav__item {
+        margin-bottom: 15px;
+    }
+    .nav__link {
+        font-size: 14px
+    }
+    .logo {
+        margin-left: 45px;
+    }
 }
 
 

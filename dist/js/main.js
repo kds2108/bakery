@@ -14,12 +14,19 @@ $('.carousel1').slick({
   });
 
 
-//carousel slick mini
-$('.carousel2').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  });
+$(document).ready(function(){
+    if ($(window).width() <= '480') {
+      $('.carousel2').slick({
+        slidesToShow: 2
+      });
+    } else {
+      $('.carousel2').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      });
+    }
+});
 
 
 let $contactForm = $(".j-contact-form");
@@ -40,4 +47,15 @@ $(".j-contact-background").click(function() {
 });
 
 
+//burger menu
+let $header = $(".j-header");
 
+$(".j-burger-link").click(function(e) {
+  e.preventDefault();
+  $header.addClass("mobile-header");
+});
+
+$(".j-burger-close-link").click(function(e) {
+  e.preventDefault();
+  $header.removeClass("mobile-header");
+});
